@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Payment extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'clients';
+    protected $table = 'payments';
 
     /**
     * The database primary key value.
@@ -25,9 +25,9 @@ class Client extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre', 'apellido', 'documento', 'cuit', 'telefono', 'correo', 'direccion'];
+    protected $fillable = ['nombre', 'descripcion'];
 
-    public function invoices(){
-        return $this->hasMany('App/invoices','client_id','id');
+    public function invoices() {
+        return $this->hasMany('App/invoices','payment_id','id');
     }
 }

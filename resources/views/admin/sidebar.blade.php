@@ -21,6 +21,16 @@
                         Clientes
                     </a>
                 </li>
+                <li role="presentation">
+                    <a href="{{ url('/payment') }}">
+                        Forma de Pago
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="{{ url('/invoice') }}">
+                        Factura
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
